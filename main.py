@@ -1,35 +1,37 @@
-import os
-
+import lib
+# inisiasi project
 if __name__ == "__main__":
+    lib.init_database()
 
-    operating_system = os.name
-    
-
+    # membuat header sambutan dan opsi
     while True:
+        lib.clean_console()
 
-        # clear terminal for both windows and mac os
-        match operating_system:
+        print("!!CRUD Simple Program!!")
+        print("="*23)
+        print("what you want to do?\n")
+        print(f"1. show data")
+        print(f"2. create new data")
+        print(f"3. update data")
+        print(f"4. delete data")
+        print(f"5. exit program\n")
 
-            case "posix": os.system('clear')
-            case "nt": os.system('cls')
+        try:
+            user_option = int(input("Masukan nomor opsi yang mau di lakukan(1-5): "))
 
-        print("DATABASE")
-        print("="*20+"\n")
-        print(f"Option:")
-        print(f"1. Add data")
-        print(f"2. Update data")
-        print(f"3. Delete data\n")
+            match user_option:
+                case 1: lib.read_console()
+                case 2: lib.create_console()
+                case 3: print(f"3. update data")
+                case 4: print(f"4. delete data")
+                case 5: break
+                case _:
+                    print("!!Opsi Hanya Angka 1 - 5!!\n")
+                    input("Press Enter to Continue")
+                    continue
+        except:
+            print("!!Opsi Harus Berupa Angka!!\n")
+            input("Press Enter to Continue")
+            continue
 
-        user_option = input("What you want to do?: ")
-
-        match user_option:
-            case "1": print("add")
-            case "2": print("update")
-            case "3": print("delete")
-
-        # stop the program
-        is_done = input("Are you Done? (y/n): ").lower()
-        if is_done == 'y':
-            break
-
-print("Program Ended.")
+print("\nProgram Ended.")
