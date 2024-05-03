@@ -1,6 +1,6 @@
 # Python-Simple-CRUD-Project
 
-Create a simple CRUD program that will save data on characters in films into a local database, namely the database.txt file. 
+Create a simple console CRUD program that will save data on characters in films into a local database, namely the database.txt file.
 This program has the following features:
 
 1. Create database.txt automatically if the file does not exist.
