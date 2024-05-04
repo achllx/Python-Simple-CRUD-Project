@@ -97,10 +97,10 @@ def update(index, id, name, rarity, price):
         with open(database.database_name, 'r+', encoding="utf-8") as file:
             lines = file.readlines()
             if index <= len(lines):
-                lines[index - 1] = data_str.ljust(data_length)  # Menimpa baris dengan data baru
-                file.seek(0)  # Pindahkan pointer file ke awal
-                file.writelines(lines)  # Tulis kembali semua baris
-                file.truncate()  # Potong sisa konten (jika ada)
+                lines[index - 1] = data_str.ljust(data_length)  # Overwrites rows with new data
+                file.seek(0)  # Move the file pointer to the beginning
+                file.writelines(lines)  # Rewrite all lines
+                file.truncate()  # Trim remaining content (if any)
                 print("Data updated successfully!")
             else:
                 print("Index out of range!")

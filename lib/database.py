@@ -1,6 +1,9 @@
 import os
+
+# this can be modified
 database_name = "weapon.txt"
 
+# this can be modified
 template = {
     "id":"",
     "timestamp":"",

@@ -9,3 +9,11 @@ This program has the following features:
 3. Add data to the database.
 4. Delete existing data in the database.
 5. Update the data in the database.
+
+---
+**NOTE**
+
+Please take a note, if you want to reuse this code for personal purposes, 
+please pay attention to the data that can be modified and then replace everything related to it so that errors don't occur.
+
+---

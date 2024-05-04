@@ -3,7 +3,7 @@ import lib
 if __name__ == "__main__":
     lib.init_database()
 
-    # membuat header sambutan dan opsi
+    # create welcome headers and options
     while True:
         lib.clean_console()
 
