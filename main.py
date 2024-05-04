@@ -18,18 +18,18 @@ if __name__ == "__main__":
 
         try:
             user_option = int(input("Masukan nomor opsi yang mau di lakukan(1-5): "))
-
             match user_option:
                 case 1: lib.read_console()
                 case 2: lib.create_console()
                 case 3: print(f"3. update data")
-                case 4: print(f"4. delete data")
+                case 4: lib.delete_console()
                 case 5: break
                 case _:
                     print("!!Opsi Hanya Angka 1 - 5!!\n")
                     input("Press Enter to Continue")
                     continue
-        except:
+        except Exception as e:
+            print(e)
             print("!!Opsi Harus Berupa Angka!!\n")
             input("Press Enter to Continue")
             continue

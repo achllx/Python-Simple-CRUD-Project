@@ -1,3 +1,4 @@
+import os
 database_name = "weapon.txt"
 
 template = {
@@ -15,3 +16,13 @@ def init_database():
     except:
         with open(database_name, 'w') as file:
             pass
+
+def init_temp():
+    if os.path.exists("data_temp.txt"):
+        # empty the file if already exist
+        with open("data_temp.txt", 'w', encoding="utf-8") as temp_file:
+            temp_file.truncate(0) 
+    else:
+        # if not exist create new one
+        with open("data_temp.txt", 'w', encoding="utf-8") as temp_file:
+            pass  
