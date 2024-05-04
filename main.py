@@ -17,20 +17,19 @@ if __name__ == "__main__":
         print(f"5. exit program\n")
 
         try:
-            user_option = int(input("Masukan nomor opsi yang mau di lakukan(1-5): "))
+            user_option = int(input("Enter option number that you want to do(1-5): "))
             match user_option:
                 case 1: lib.read_console()
                 case 2: lib.create_console()
-                case 3: print(f"3. update data")
+                case 3: lib.update_console()
                 case 4: lib.delete_console()
                 case 5: break
                 case _:
-                    print("!!Opsi Hanya Angka 1 - 5!!\n")
+                    print("!!Optin is only between number 1 and 5!!\n")
                     input("Press Enter to Continue")
                     continue
-        except Exception as e:
-            print(e)
-            print("!!Opsi Harus Berupa Angka!!\n")
+        except:
+            print("!!Option must a number!!\n")
             input("Press Enter to Continue")
             continue
 
