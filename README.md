@@ -1,6 +1,7 @@
 # Python-Simple-CRUD-Project
 
-Re-Create a simple console CRUD program from @kelasterbuka online course that will save data on characters in films into a local database, namely the database.txt file.
+Re-Create a simple console CRUD program from @kelasterbuka online course that which implements all the material learned from basic python programming from @kelasterbuka.
+This program has a function to save save data on characters in films into a local database, namely the database.txt file.
 This program has the following features:
 
 1. Create database.txt automatically if the file does not exist.
